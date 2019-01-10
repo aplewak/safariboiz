@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+center.head {
+	font-family: 	serif;
+	font-size: 35px;
+	font-style: italic;
+	color: red;
+}
+
+Panel.Body {
+	color: black;
+}

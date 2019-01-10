@@ -1,0 +1,134 @@
+.App {
+  text-align: center;
+  background : '#1DCED8';
+  transform:'rotate(.25deg)';
+  height:'200px';
+  display: responsive;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+.sftText {
+  display: flex;
+  column-span: 50%;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  justify-content: space-evenly;
+}
+
+.hrdText {
+  display: flex;
+  column-span: 50%;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  justify-content: space-evenly;
+}
+
+.cntText {
+  display: flex;
+  column-span: 50%;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  justify-content: space-evenly;
+}
+
+.head {
+  background :white;
+   top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  transform:rotate(.25deg);
+  height:200px;
+  width: 100%;
+  text-align: center;
+
+}
+
+.headTitle{
+  font-size: 30px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  shadow:5px;
+  
+}
+
+
+div.bsel {
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  
+ 
+}
+
+.but4:hover {
+ box-shadow:
+ 20px 5px 40px #DAEAF6,
+   0px 5px 40px #DAEAF6,
+  -20px 5px 40px #DAEAF6;
+  background-image: linear-gradient(-90deg, #CF77F3 0%, #009BFF 47%, #2AC9DB 100%);
+}
+.but3:hover {
+ box-shadow:
+ 20px 5px 40px skyblue,
+   0px 5px 40px skyblue,
+  -20px 5px 40px skyblue;
+}
+.but2:hover {
+ box-shadow:
+ 20px 5px 40px #0D8ABC,
+   0px 5px 40px #0D8ABC,
+  -20px 5px 40px  #0D8ABC;
+
+}
+
+.but1:hover {
+ box-shadow:
+ 20px 5px 40px #124E96,
+   0px 5px 40px #124E96,
+  -20px 5px 40px #124E96;
+
+}
+
+.afrPIC {
+  display: flex;
+}
