@@ -1,6 +1,6 @@
 {
-
-  "homepage": "https://aplewak.github.io/atpweb/",
+  "name": "atpweb",
+  "homepage": "http://aplewak.github.io/atpweb",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
