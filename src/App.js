@@ -14,7 +14,7 @@ class App extends Component {
       super();
       
       this.state = {
-        headerValue : '{APLEWAK@GITHUB.IO}'
+        headerValue : 'Moose'
         , softwareTextisOpen : false
         , hardwareTextisOpen : false
         , contactTextisOpen : false
