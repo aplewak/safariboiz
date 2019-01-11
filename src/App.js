@@ -46,7 +46,7 @@ class App extends Component {
           ,hardwareTextisOpen: false
           ,contactTextisOpen: false
           ,tuningTextisOpen: false
-          ,headerValue: '{SOFTWARE}'
+          ,headerValue: 'Software'
       });
       console.log('click');
     }
@@ -56,7 +56,7 @@ class App extends Component {
           ,softwareTextisOpen: false
           ,contactTextisOpen: false
           ,tuningTextisOpen: false
-          ,headerValue: '{HARDWARE}'
+          ,headerValue: 'Hardware '
       });
       console.log('click');
     }
@@ -66,7 +66,7 @@ class App extends Component {
         ,softwareTextisOpen: false
         ,hardwareTextisOpen: false
         ,tuningTextisOpen: false
-          ,headerValue: '{CONTACT}'
+          ,headerValue: 'Contact '
       });
       console.log('click');
     }
@@ -76,7 +76,7 @@ class App extends Component {
         ,softwareTextisOpen: false
         ,hardwareTextisOpen: false
         ,contactTextisOpen: false
-          ,headerValue: '{TUNING}'
+          ,headerValue: 'Tuning '
       });
       console.log('click');
     }
@@ -91,9 +91,9 @@ class App extends Component {
         <div>
         
       
-        <div className="head" style={{background:'#5BE7C4'}}>
+        <div className="head" style={{background:'white'}}>
 
-          <h2 className="headTitle" ><b>  {this.state.headerValue}  </b></h2>
+          <h2 className="headTitle" style={{background:'#29CDB5', color:'white', fontSize:'36px'}}><b>  {this.state.headerValue}  </b></h2>
         
           
 
@@ -134,7 +134,7 @@ class App extends Component {
       </div>
       </div>
        
-         <center><b>APLEWAK@GITHUB.IO</b></center>
+         <center><b>APLEWAK@GITHUB.IO/ATPWEB</b></center>
       </div>
     );
   }

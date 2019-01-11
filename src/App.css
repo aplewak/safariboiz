@@ -71,7 +71,7 @@
   left: 50%;
 
   transform: translate(-50%, -50%);
-  transform:rotate(.25deg);
+  transform:rotate(.01deg);
   height:200px;
   width: 100%;
   text-align: center;
@@ -87,6 +87,9 @@
   margin-right: -50%;
   transform: translate(-50%, -50%);
   shadow:5px;
+  font-family: Helvetica, Arial, sans-serif; 
+  font-weight: bold; 
+  /*font-style : italic;*/
   
 }
 
