@@ -4,10 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Select from 'react-select';
 import { Panel,Button,Image } from 'react-bootstrap';
 import {Collapse} from 'react-collapse';
-import man from '../src/manif.JPG'
-import map from '../src/map.JPG'
-import twg from '../src/twg.JPG'
-import s200 from '../src/s200sx.JPG'
+import man from '../src/IMAGES/manif.JPG'
+import map from '../src/IMAGES/map.JPG'
+import twg from '../src/IMAGES/twg.JPG'
+import s200 from '../src/IMAGES/s200sx.JPG'
 
 
 

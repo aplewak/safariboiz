@@ -4,8 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Select from 'react-select';
 import { Panel,Button,Image } from 'react-bootstrap';
 import {Collapse} from 'react-collapse';
-import airmass from '../src/AIRMASS.JPG'
-import dyno from '../src/DYNOGRAPH.JPG'
+import airmass from '../src/IMAGES/airm.JPG'
+import pwm from '../src/IMAGES/pwm.JPG'
+import fuel from '../src/IMAGES/fuel.JPG'
+import dyno from '../src/IMAGES/DYNOGRAPH.JPG'
 
 
 
@@ -30,14 +32,19 @@ class GetDetailTextForTuning extends Component {
     <Collapse isOpened={this.props.tuningTextisOpen}>
      <center>
           <h2>
-         <a>   <b>T7 Suite Tuning</b> </a>
+         <a>   <b>Engine Performance Tuning </b> </a>
             </h2>
+            <h6>
+              <b>Custom T7 engine management tuning: </b>
+             
+              <li>9-3 2000-2002 4Cyl</li>
+              <li>9-5 1998-2010 4Cyl</li>
+
+            </h6>
             
-      <div style={{display:'flex'}}>
-          <img className="afrPIC" src={airmass}  style ={{width:'auto',height:'200px'}}alt="Logo" />
-          
-          <img className="afrPIC" src={dyno}  style ={{maxWidth:'auto',maxHeight:'100%',position:'static'}}alt="Logo" />
-          </div>
+          <img className="" src={airmass}  style={{maxWidth:'30%',height:'auto'}} alt="Logo" />
+          <img className="" src={pwm}   style={{maxWidth:'30%',height:'auto'}}alt="Logo" />
+          <img className="" src={fuel}   style={{maxWidth:'30%',height:'auto'}}alt="Logo" />
           </center>
 
       <Button style={{background:'#0D8ABC'}} onClick={this.props.CollapseTuningInfo}><b>collapse</b></Button>

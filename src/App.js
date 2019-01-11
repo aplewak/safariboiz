@@ -8,13 +8,14 @@ import GetDetailTextForHardware from "../src/GetDetailTextForHardware.jsx"
 import GetDetailTextForContact from "../src/GetDetailTextForContact.jsx"
 import GetDetailTextForTuning from "../src/GetDetailTextForTuning.jsx"
 import {Collapse} from 'react-collapse';
+import turbo from '../src/IMAGES/turbo.JPG'
 
 class App extends Component {
    constructor() {
       super();
       
       this.state = {
-        headerValue : 'Moose'
+        headerValue : '{ATPWEB}'
         , softwareTextisOpen : false
         , hardwareTextisOpen : false
         , contactTextisOpen : false
@@ -45,7 +46,7 @@ class App extends Component {
           ,hardwareTextisOpen: false
           ,contactTextisOpen: false
           ,tuningTextisOpen: false
-          ,randColor: Math.random()*255
+          ,headerValue: '{SOFTWARE}'
       });
       console.log('click');
     }
@@ -55,7 +56,7 @@ class App extends Component {
           ,softwareTextisOpen: false
           ,contactTextisOpen: false
           ,tuningTextisOpen: false
-          ,randColor: Math.random()*255
+          ,headerValue: '{HARDWARE}'
       });
       console.log('click');
     }
@@ -65,7 +66,7 @@ class App extends Component {
         ,softwareTextisOpen: false
         ,hardwareTextisOpen: false
         ,tuningTextisOpen: false
-          ,randColor: Math.random()*255
+          ,headerValue: '{CONTACT}'
       });
       console.log('click');
     }
@@ -75,7 +76,7 @@ class App extends Component {
         ,softwareTextisOpen: false
         ,hardwareTextisOpen: false
         ,contactTextisOpen: false
-          ,randColor: Math.random()*255
+          ,headerValue: '{TUNING}'
       });
       console.log('click');
     }
@@ -90,7 +91,7 @@ class App extends Component {
         <div>
         
       
-        <div className="head" style={{background:'#'+10000}}>
+        <div className="head" style={{background:'#5BE7C4'}}>
 
           <h2 className="headTitle" ><b>  {this.state.headerValue}  </b></h2>
         
