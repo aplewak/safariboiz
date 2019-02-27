@@ -3,10 +3,9 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Select from 'react-select';
 import { Panel,Button,Image } from 'react-bootstrap';
-import GetDetailTextForSoftware from "../src/getDetailTextForSoftware.jsx"
-import GetDetailTextForHardware from "../src/GetDetailTextForHardware.jsx"
-import GetDetailTextForContact from "../src/GetDetailTextForContact.jsx"
-import GetDetailTextForTuning from "../src/GetDetailTextForTuning.jsx"
+import GetDetailTextForLimiters from "../src/getDetailTextForLimiters.jsx"
+import GetDetailTextForBoost from "../src/GetDetailTextForBoost.jsx"
+import GetDetailTextForFuel from "../src/GetDetailTextForFuel.jsx"
 import {Collapse} from 'react-collapse';
 import turbo from '../src/IMAGES/turbo.JPG'
 
@@ -15,11 +14,11 @@ class App extends Component {
       super();
       
       this.state = {
-        headerValue : '{ATPWEB}'
-        , softwareTextisOpen : false
-        , hardwareTextisOpen : false
-        , contactTextisOpen : false
-        , tuningTextisOpen : false
+        headerValue : 'Trionic Tuning Tutorials'
+        , limiterTextisOpen : false
+        , boostTextisOpen : false
+        , fuelTextisOpen : false
+        , miscTextisOpen : false
         , LightboxisOpen : false
         , randColor : ''
 
@@ -27,11 +26,9 @@ class App extends Component {
      }
      //bind functions
       this.force = this.force.bind(this);
-      this.getDetailTextForSoftware = this.getDetailTextForSoftware.bind(this);
-      this.getDetailTextForHardware = this.getDetailTextForHardware.bind(this);
-      this.getDetailTextForTuning = this.getDetailTextForTuning.bind(this);
-      this.getDetailTextForContact = this.getDetailTextForContact.bind(this);
-      this.getDetailTextForTuning = this.getDetailTextForTuning.bind(this);
+      this.getDetailTextForLimiters = this.getDetailTextForLimiters.bind(this);
+      this.getDetailTextForBoost = this.getDetailTextForBoost.bind(this);
+      this.getDetailTextForFuel = this.getDetailTextForFuel.bind(this);
      
     }
 
@@ -40,46 +37,37 @@ class App extends Component {
       console.log('force update');
     }
 
-    getDetailTextForSoftware(){
+    getDetailTextForLimiters(){
       this.setState({
-          softwareTextisOpen: !this.state.softwareTextisOpen
-          ,hardwareTextisOpen: false
-          ,contactTextisOpen: false
-          ,tuningTextisOpen: false
-          ,headerValue: 'Software'
+          limiterTextisOpen: !this.state.limiterTextisOpen
+          ,boostTextisOpen: false
+          ,fuelTextisOpen: false
+          ,miscTextisOpen: false
+          ,headerValue: 'Limiters'
       });
       console.log('click');
     }
-    getDetailTextForHardware(){
+    getDetailTextForBoost(){
       this.setState({
-        hardwareTextisOpen: !this.state.hardwareTextisOpen
-          ,softwareTextisOpen: false
-          ,contactTextisOpen: false
-          ,tuningTextisOpen: false
-          ,headerValue: 'Hardware '
+        boostTextisOpen: !this.state.boostTextisOpen
+          ,limiterTextisOpen: false
+          ,fuelTextisOpen: false
+          ,miscTextisOpen: false
+          ,headerValue: 'Boost '
       });
       console.log('click');
     }
-    getDetailTextForContact(){
+    getDetailTextForFuel(){
       this.setState({
-        contactTextisOpen: !this.state.contactTextisOpen
-        ,softwareTextisOpen: false
-        ,hardwareTextisOpen: false
-        ,tuningTextisOpen: false
-          ,headerValue: 'Contact '
+        fuelTextisOpen: !this.state.fuelTextisOpen
+        ,limiterTextisOpen: false
+        ,boostTextisOpen: false
+        ,miscTextisOpen: false
+          ,headerValue: 'Fuel'
       });
       console.log('click');
     }
-    getDetailTextForTuning(){
-      this.setState({
-        tuningTextisOpen: !this.state.tuningTextisOpen
-        ,softwareTextisOpen: false
-        ,hardwareTextisOpen: false
-        ,contactTextisOpen: false
-          ,headerValue: 'Tuning '
-      });
-      console.log('click');
-    }
+  
        
 
   render() {
@@ -93,48 +81,46 @@ class App extends Component {
       
         <div className="head" style={{background:'white'}}>
 
-          <h2 className="headTitle" style={{background:'#29CDB5', color:'white', fontSize:'36px'}}><b>  {this.state.headerValue}  </b></h2>
-        
+           <h2 className="headTitle" 
+          style={{background:'#e2dcd5', color:'white', fontSize:'36px', borderRadius:'5px',fontFamily:'DejaVu Sans Mono, monospace'}}>
+
+          <b>
+          
+            {this.state.headerValue}  
+            </b>
+          </h2>
           
 
         </div> 
         <b>
-            <Button  className="but1" onClick={this.getDetailTextForSoftware} style={{background:'#124E96'}}>  <b>Software</b></Button>
-            <Button  className="but2" onClick={this.getDetailTextForHardware} style={{background:'#0D8ABC'}}>  <b>Hardware </b></Button>
-            <Button  className="but3" onClick={this.getDetailTextForTuning} style={{background:'skyblue'}}>  <b>Tuning </b></Button>
-            <Button  className="but4" onClick={this.getDetailTextForContact} style={{background:'#DAEAF6'}}><b>Contact </b></Button>
+            <Button  className="but1" onClick={this.getDetailTextForLimiters} style={{background:'#ff5959'}}>  <b>Limiters</b></Button>
+            <Button  className="but2" onClick={this.getDetailTextForBoost} style={{background:'#ffad5a'}}>  <b>Boost </b></Button>
+            <Button  className="but3" onClick={this.getDetailTextForFuel} style={{background:'#4f9da6'}}>  <b>Fuel </b></Button>
+            
         </b>
 
         
         
 
           <div>
-            <GetDetailTextForSoftware
+            <GetDetailTextForLimiters
               className="sftText"
-              softwareTextisOpen={this.state.softwareTextisOpen} 
-              CollapseSoftwareInfo={this.getDetailTextForSoftware}
+              limiterTextisOpen={this.state.limiterTextisOpen} 
             />
-            <GetDetailTextForHardware
+            <GetDetailTextForBoost
               className="hrdText"
-              LightboxisOpen={this.state.LightboxisOpen}
-              hardwareTextisOpen={this.state.hardwareTextisOpen} 
-              CollapseHardwareInfo={this.getDetailTextForHardware}
+              boostTextisOpen={this.state.boostTextisOpen} 
             />
-            <GetDetailTextForContact
+            <GetDetailTextForFuel
             className="cntText"
-              contactTextisOpen = {this.state.contactTextisOpen}
-              CollapseContactInfo = {this.getDetailTextForContact}
+              fuelTextisOpen = {this.state.fuelTextisOpen}
             />
-            <GetDetailTextForTuning
-            className="sftText"
-              tuningTextisOpen = {this.state.tuningTextisOpen}
-              CollapseTuningInfo = {this.getDetailTextForTuning}
-            />
+          
 
       </div>
       </div>
        
-         <center><b>APLEWAK@GITHUB.IO/ATPWEB</b></center>
+         <center><b>APLEWAK@GITHUB.IO/trionictuningtutorials</b></center>
       </div>
     );
   }

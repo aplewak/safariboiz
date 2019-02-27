@@ -11,7 +11,7 @@ import dyno from '../src/IMAGES/DYNOGRAPH.JPG'
 
 
 
-class GetDetailTextForTuning extends Component {
+class GetDetailTextForFuel extends Component {
    constructor() {
       super();
       this.state = {
@@ -29,28 +29,25 @@ class GetDetailTextForTuning extends Component {
      }
   render() {
     return (
-    <Collapse isOpened={this.props.tuningTextisOpen}>
+    <Collapse isOpened={this.props.fuelTextisOpen}>
      <center>
           <h2>
-         <a>   <b>Engine Performance Tuning </b> </a>
+         <a>   <b>Fuel </b> </a>
             </h2>
             <h6>
-              <b>Custom T7 engine management tuning: </b>
-             
-              <li>9-3 2000-2002 4Cyl</li>
-              <li>9-5 1998-2010 4Cyl</li>
+              <b>todo fill in</b>
+        
 
             </h6>
             
-          <img className="" src={airmass}  style={{maxWidth:'30%',height:'auto'}} alt="Logo" />
-          <img className="" src={pwm}   style={{maxWidth:'30%',height:'auto'}}alt="Logo" />
+         {/* <img className="" src={airmass}  style={{maxWidth:'30%',height:'auto'}} alt="Logo" />
+          <img className="" src={pwm}   style={{maxWidth:'30%',height:'auto'}}alt="Logo" />*/}
           <img className="" src={fuel}   style={{maxWidth:'30%',height:'auto'}}alt="Logo" />
           </center>
 
-      <Button style={{background:'#0D8ABC'}} onClick={this.props.CollapseTuningInfo}><b>collapse</b></Button>
     </Collapse>
     );
   }
 }
 
-export default GetDetailTextForTuning;
+export default GetDetailTextForFuel;

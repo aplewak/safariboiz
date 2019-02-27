@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background : '#1DCED8';
+  background : '#23425f';
   transform:'rotate(.25deg)';
   height:'200px';
   display: responsive;
@@ -103,35 +103,12 @@ div.bsel {
  
 }
 
-.but4:hover {
- box-shadow:
- 20px 5px 40px #DAEAF6,
-   0px 5px 40px #DAEAF6,
-  -20px 5px 40px #DAEAF6;
-  background-image: linear-gradient(-90deg, #CF77F3 0%, #009BFF 47%, #2AC9DB 100%);
-}
-.but3:hover {
- box-shadow:
- 20px 5px 40px skyblue,
-   0px 5px 40px skyblue,
-  -20px 5px 40px skyblue;
-}
-.but2:hover {
- box-shadow:
- 20px 5px 40px #0D8ABC,
-   0px 5px 40px #0D8ABC,
-  -20px 5px 40px  #0D8ABC;
 
-}
-
-.but1:hover {
- box-shadow:
- 20px 5px 40px #124E96,
-   0px 5px 40px #124E96,
-  -20px 5px 40px #124E96;
-
-}
 
 .afrPIC {
   display: flex;
+}
+
+tr {
+  align-content:'left';
 }

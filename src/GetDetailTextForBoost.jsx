@@ -6,13 +6,14 @@ import { Panel,Button,Image } from 'react-bootstrap';
 import {Collapse} from 'react-collapse';
 import man from '../src/IMAGES/manif.JPG'
 import map from '../src/IMAGES/map.JPG'
+import pwm from '../src/IMAGES/pwm.JPG'
 import twg from '../src/IMAGES/twg.JPG'
 import s200 from '../src/IMAGES/s200sx.JPG'
 
 
 
 
-class GetDetailTextForHardware extends Component {
+class getDetailTextForBoost extends Component {
    constructor() {
       super();
       this.state = {
@@ -31,28 +32,21 @@ class GetDetailTextForHardware extends Component {
   render() {
     return (
       <div>
-    <Collapse isOpened={this.props.hardwareTextisOpen}>
+    <Collapse isOpened={this.props.boostTextisOpen}>
       <div>
           <center>
           <h2>
-         <a >   <b>Hardware</b> </a>    <b>Projects</b>
+         <a href='https://www.trionictuning.com/forum/viewtopic.php?f=57&t=3474'>   <b>Boost</b> </a>   
             </h2>
      
-            <h4>Flanges</h4>
-              <li> Borg Warner s200sx T4 twin scroll turbine housings   </li>
-              <li> Tial f38 wastegate </li>
-              <li> B235X exhaust manifold </li>
-              <li> map sensor  </li>
-        <img className="map" style={{maxWidth:'30%',height:'auto'}} src={map}  alt="Logo" />
-        <img className="man" style={{maxWidth:'30%',maxheight:'auto'}} src={s200}  alt="Logo" />
-        <img className="man" style={{maxWidth:'30%',maxheight:'auto'}} src={twg}  alt="Logo" />
+            <img className="" src={pwm}   style={{maxWidth:'30%',height:'auto'}}alt="Logo" />
+
        
 
      
           </center>
         </div>
-            
-      <Button style={{background:'#0D8ABC'}} onClick={this.props.CollapseHardwareInfo}><b>collapse</b></Button>
+      
       <center>
         </center>
     </Collapse>
@@ -61,4 +55,4 @@ class GetDetailTextForHardware extends Component {
   }
 }
 
-export default GetDetailTextForHardware;
+export default getDetailTextForBoost;
