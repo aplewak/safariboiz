@@ -83,12 +83,12 @@ class App extends Component {
 
            <h2 className="headTitle" 
           style={{background:'#e2dcd5', color:'white', fontSize:'36px', borderRadius:'5px',fontFamily:'DejaVu Sans Mono, monospace'}}>
-
           <b>
           
             {this.state.headerValue}  
             </b>
           </h2>
+           
           
 
         </div> 
