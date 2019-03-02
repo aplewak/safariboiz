@@ -58,6 +58,7 @@ class getDetailTextForBoost extends Component {
             <table>
                     <li> <b> turn off boost controller  </b> : boostcal.st_enable = 0 </li>
                     <li> <b> turn off boost adaptation </b> :  boostcal.EnableBoostadap = 0</li>
+                    <li> <b> Fill the boostcal.regmap with 0's (0% duty cycle)  </b></li>
                    
             <p>Once you complete this look for a good third gear pull throughout the rev range in your logs and fill in the following tables </p>
                     <li> <b> BoostCal.P_LimTab </b> </li>
@@ -71,7 +72,33 @@ class getDetailTextForBoost extends Component {
                     <img className="" src={xsp}   style={{maxWidth:'30%',height:'auto'}}alt="Logo" />
                     <p>So in my logs I hit a base boost of about 1200 so this is a good starting point.
                     I also added about 100 to every column until it was filled</p>
-                    <b>Note: based on the turbo setup you may have more flowing capabilities or less so determining how high you can go is based on the flow characteristics of your turbo</b>
+                    <b>Note: Based on your turbo setup you may have more or less flowing capabilities, so determining how high you can go is based on the flow characteristics of your turbo</b>
+             <b><h3>Step 3  : Fine tuning the boostcal.regmap</h3> </b>
+             <table>
+                    <p><b>So now we have our targets set up we now want to do the following: </b></p>
+                    <li> <b> Activiate the boost controller  </b> : boostcal.st_enable = 1 </li>
+                    <li> <b> Boostcal.regMap to filled with 0's  </b> </li>
+                    <li> <b> Boostcal.Pmap to filled with 0's  </b>  </li>
+                    <li> <b> Boostcal.Imap to filled with 0's  </b>  </li>
+                    <li> <b> Boostcal.Dmap to filled with 0's  </b>  </li>
+                    </table>
+             <table>
+                    <h5>So now if we look at the Boostcal.regMap your support points should now include the new ones that you entered before</h5>
+                    <p> So the idea here is we will start at the first interval and work our way to the maximum interval by adjusting the regmap   </p>
+                    <p><b>( Changing mreq ) : So to start off you must change your bstknckcal.maxairmass right most column to request the first interval airmass  </b></p>
+                    <li> ex: In my 1300 interval I set the right most column to request 1300 mair between 3000-5800 rpm   </li>
+                    <p><b>(Adjusting mair) : By changing the duty cycle you then change how much air is delivered, so i would change the regmap to in intervals of 5-10% </b></p>
+                    <li> ex: In my 1300 interval i set the duty cycle in my regmap to 2% because my base boost was just under that interval   </li>
+                    <p><b>Now go out for a drive and log information , the idea is to get as close as possible to the targets </b></p>
+                    <p><b>Once you dial in on one interval move up to the next one by adjusting , requested airmass, and adjusting the wastegate duty cylce until you complete the set </b></p>
+                    </table>
+             <b><h3>Step 4  : Activating the pid controller </h3> </b>
+                    <p><b> Now you need to revert the P,D and I maps to the original state and do the following    </b></p>
+                    <p><b> (mreq - mair achieved )* pconst(pmap xaxis) /100 = duty cycle to subtract from the intervals   </b></p>
+                    <li> ex : (1500- 1460 )*50 / 100 = 2 = 2% so i would subtract 2% from my 1500 mair interval   </li>
+                    
+
+                    
 
 
 
