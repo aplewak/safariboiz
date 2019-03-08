@@ -47,7 +47,7 @@ class GetDetailTextForLimiters extends Component {
                  </tr>
                 </table>
                 <h4><b> Common Limiting Maps </b></h4>
-                
+                <center>
                 <table>
                 <div>
                 <h10>
@@ -59,12 +59,13 @@ class GetDetailTextForLimiters extends Component {
                     </h10>
                 </div>
                 </table>
+                </center>
                 <h4><b> Important  </b></h4>
                 <h7><b>When altering these maps I tend to constantly check my airmass result viewer to make sure there are no limiting factors prior to flashing my ecu</b></h7>
                     <p> <b>Actions -> Airmass result viewer</b> </p>
                     <h4><b> Example Situation  </b></h4>
-                <h8>So you changed all your airmass and torque limiters and you go to the airmass result view and see you have a bunch of limiters and the airmass values have not increased</h8>
-                <h8>This is because the limiters need to be altered in order to achieve your desired output </h8>
+                <h8>So you changed all your airmass and torque limiters and you go to the airmass result view and see you have a bunch of limiters(different colored tabs on the top column) and the airmass values have not increased</h8>
+                <h8>.This is because the limiters need to be altered in order to achieve your desired output </h8>
 
                   </center>
                 <img className="" src={arv}   style={{maxWidth:'50%',height:'auto'}}alt="Logo" />
@@ -73,6 +74,7 @@ class GetDetailTextForLimiters extends Component {
                 </div>
                 <img className="" src={tsl}   style={{maxWidth:'50%',height:'auto'}}alt="Logo" />
                 <img className="" src={arv2}   style={{maxWidth:'50%',height:'auto'}}alt="Logo" />
+                    <h4> <b>Lastly if you click the limiter text in the airmass result viewer it will bring up the associated maps</b> </h4>
 
         </div>
     </Collapse>

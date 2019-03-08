@@ -10,6 +10,7 @@ import pwm from '../src/IMAGES/pwm.JPG'
 import twg from '../src/IMAGES/twg.JPG'
 import xsp from '../src/IMAGES/xsp.JPG'
 import iplim from '../src/IMAGES/iplim.JPG'
+import rmupd from '../src/IMAGES/rmupd.JPG'
 
 
 
@@ -82,20 +83,28 @@ class getDetailTextForBoost extends Component {
                     <li> <b> Boostcal.Imap to filled with 0's  </b>  </li>
                     <li> <b> Boostcal.Dmap to filled with 0's  </b>  </li>
                     </table>
-             <table>
                     <h5>So now if we look at the Boostcal.regMap your support points should now include the new ones that you entered before</h5>
+                    <img className="" src={rmupd}   style={{maxWidth:'30%',height:'auto'}}alt="Logo" />
                     <p> So the idea here is we will start at the first interval and work our way to the maximum interval by adjusting the regmap   </p>
+             <table>
+             <b><h3>Step 3.1  : Adjusting Airmass limiters(mreq)</h3> </b>
                     <p><b>( Changing mreq ) : So to start off you must change your bstknckcal.maxairmass right most column to request the first interval airmass  </b></p>
                     <li> ex: In my 1300 interval I set the right most column to request 1300 mair between 3000-5800 rpm   </li>
-                    <p><b>(Adjusting mair) : By changing the duty cycle you then change how much air is delivered, so i would change the regmap to in intervals of 5-10% </b></p>
+              
+             <b><h3>Step 3.2  : Adjusting actual Airmass (mair)</h3> </b>
+             
+                    <p><b>(Adjusting mair) : By changing the duty cycle you then change how much air is delivered, so i would change the regmap to in intervals of 5-10% at at a time until I got within 1-3% of my airmass</b></p>
                     <li> ex: In my 1300 interval i set the duty cycle in my regmap to 2% because my base boost was just under that interval   </li>
+             <b><h3>Step 3.3 : Log and repeat </h3> </b>
                     <p><b>Now go out for a drive and log information , the idea is to get as close as possible to the targets </b></p>
-                    <p><b>Once you dial in on one interval move up to the next one by adjusting , requested airmass, and adjusting the wastegate duty cylce until you complete the set </b></p>
-                    </table>
+                    <p><b>Once you dial in on one interval move up to the next one ( repeat 3.1-3) by adjusting , requested airmass, and adjusting the wastegate duty cylce until you complete the set </b></p>
+             
              <b><h3>Step 4  : Activating the pid controller </h3> </b>
+            
                     <p><b> Now you need to revert the P,D and I maps to the original state and do the following    </b></p>
                     <p><b> (mreq - mair achieved )* pconst(pmap xaxis) /100 = duty cycle to subtract from the intervals   </b></p>
                     <li> ex : (1500- 1460 )*50 / 100 = 2 = 2% so i would subtract 2% from my 1500 mair interval   </li>
+              </table>
                     
 
                     
