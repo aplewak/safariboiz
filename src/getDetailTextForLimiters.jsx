@@ -30,7 +30,7 @@ class GetDetailTextForLimiters extends Component {
 
           
                 </div>
-                <table>
+               
                   <tr>
                     <b><h4>Description : </h4></b>
                     
@@ -40,16 +40,18 @@ class GetDetailTextForLimiters extends Component {
                   </tr>
                <tr>
                 <h4> Preliminaries : </h4>
+                <table>
                 <p>
                   <li> <b>Petrol torque</b> : (Airmass /3.1) = estimated petrol torque(Nm)</li>
                   <li><b> E85 torque</b> : (Airmass / 2.9) = estimated e85 torque(Nm)</li>
                   </p>
+                  </table>
                  </tr>
-                </table>
+              
                 <h4><b> Common Limiting Maps </b></h4>
                 <center>
                 <table>
-                <div>
+             
                 <h10>
                     <p> <b> torqueCal.m_AirTorqueMap</b> : gearbox max torque pmiter, the 350/370 column has to be altered(fooled) to achieve higher tq.</p>
                     <p> <b> torqueCal.M_mangearpm </b> : max allowed torque pmit per gear</p>
@@ -57,7 +59,7 @@ class GetDetailTextForLimiters extends Component {
                     <p> <b> bstKnkCal.MaxAirmass</b> : Max requested airmass , most right column is used if no knock is detected</p>
                     <p> <b>Others under the limiters tab in t7 suite</b> </p>
                     </h10>
-                </div>
+              
                 </table>
                 </center>
                 <h4><b> Important  </b></h4>

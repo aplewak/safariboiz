@@ -8,6 +8,8 @@ import airmass from '../src/IMAGES/airm.JPG'
 import pwm from '../src/IMAGES/pwm.JPG'
 import fuel from '../src/IMAGES/fuel.JPG'
 import dyno from '../src/IMAGES/DYNOGRAPH.JPG'
+import wbref from '../src/IMAGES/wbref.JPG'
+import wbai from '../src/IMAGES/wbai.JPG'
 
 
 
@@ -35,7 +37,6 @@ class GetDetailTextForFuel extends Component {
          <a>   <b>Fuel </b> </a>
             </h2>
             <h6>
-              <b>todo fill in</b>
         
 
             </h6>
@@ -43,6 +44,17 @@ class GetDetailTextForFuel extends Component {
          {/* <img className="" src={airmass}  style={{maxWidth:'30%',height:'auto'}} alt="Logo" />
           <img className="" src={pwm}   style={{maxWidth:'30%',height:'auto'}}alt="Logo" />*/}
           <img className="" src={fuel}   style={{maxWidth:'30%',height:'auto'}}alt="Logo" />
+              <b><h3>Preliminaries : </h3></b>
+              <table>
+              <b><h6>Familiar with OPEN BINS ( 46s, 55p etc ) </h6></b>
+              <b><h6>Knowledge of the VE fuel maps </h6></b>
+              <b><h6>Wideband lambda sensor </h6></b>
+              </table>
+              <b><h3> Configuring your wideband setup: </h3></b>
+              <b><h6>So from the documentation there is an open analog input slot on <b>pin 16</b> on the ecu harness </h6></b>
+              <b><h6>This is good because t7 suite has an option to convert the 0-5v range into afr readings which will be used for the AUTOTUNE function later on </h6></b>
+          <img className="" src={wbref}   style={{maxWidth:'30%',height:'auto'}}alt="Logo" />
+          <img className="" src={wbai}   style={{maxWidth:'30%',height:'auto'}}alt="Logo" />
           </center>
 
     </Collapse>

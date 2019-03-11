@@ -95,7 +95,7 @@ class App extends Component {
         <b>
             <Button  className="but1" onClick={this.getDetailTextForLimiters} style={{background:'#ff5959'}}>  <b>Limiters <sub>1</sub></b></Button>
             <Button  className="but2" onClick={this.getDetailTextForBoost} style={{background:'#ffad5a'}}>  <b>Boost  <sub>2</sub></b></Button>
-            <Button  className="but3" onClick={this.getDetailTextForFuel} style={{background:'#4f9da6'}}>  <b>Fuel <sub>todo</sub> </b></Button>
+            <Button  className="but3" onClick={this.getDetailTextForFuel} style={{background:'#4f9da6'}}>  <b>Fuel <sub>3</sub> </b></Button>
             <Button  className="but3"  style={{background:'#f8ed86'}}>  <b>ignition <sub>todo</sub> </b></Button>
             <Button  className="but3"  style={{background:'#29cdb5'}}>  <b>others <sub>todo</sub> </b></Button>
             
