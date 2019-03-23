@@ -65,6 +65,7 @@ class getDetailTextForBoost extends Component {
                     <li> <b> BoostCal.P_LimTab </b> </li>
                     <li> <b> BoostCal.I_LimTab </b> </li>
                     <p>So once the mair goes higher then the values in these tables then your boost controller will kick in</p>
+                    <p>The lower part of the I_limtab is when ilim becomes active , i can raise these so that it only becomes active past 900 mg/c as its not needed to be active before the turbo spools </p>
             </table>
                     <img className="" src={iplim}   style={{maxWidth:'30%',height:'auto'}}alt="Logo" />
              <b><h3>Step 2  : Setting your boost intervals/tuning the boostcal.regmap</h3> </b>

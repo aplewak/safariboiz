@@ -7,6 +7,7 @@ import {Collapse} from 'react-collapse';
 import arv from '../src/IMAGES/arv.JPG';
 import tsl from '../src/IMAGES/tsl.JPG';
 import arv2 from '../src/IMAGES/arv2.JPG';
+import tqref from '../src/IMAGES/tqref.JPG';
 
 
 class GetDetailTextForLimiters extends Component {
@@ -51,6 +52,7 @@ class GetDetailTextForLimiters extends Component {
                 <h4><b> Common Limiting Maps </b></h4>
                 <center>
                 <table>
+                    <center>
              
                 <h10>
                     <p> <b> torqueCal.m_AirTorqueMap</b> : gearbox max torque pmiter, the 350/370 column has to be altered(fooled) to achieve higher tq.</p>
@@ -59,6 +61,12 @@ class GetDetailTextForLimiters extends Component {
                     <p> <b> bstKnkCal.MaxAirmass</b> : Max requested airmass , most right column is used if no knock is detected</p>
                     <p> <b>Others under the limiters tab in t7 suite</b> </p>
                     </h10>
+                <h4><b> Keep in mind </b></h4>
+                <h10>
+                  The engine torque map references the air/torq maps. So in the example, where 330 is referenced in the rev range is where the max torque will be requesting the max when modified the air/torq map
+                <img className="" src={tqref}   style={{maxWidth:'50%',height:'auto'}}alt="Logo" />
+                </h10>
+                </center>
               
                 </table>
                 </center>
@@ -72,7 +80,7 @@ class GetDetailTextForLimiters extends Component {
                   </center>
                 <img className="" src={arv}   style={{maxWidth:'50%',height:'auto'}}alt="Logo" />
                   <div>
-                <b>Ex: Here i had to change my turbospeedlimiter (raised to 1.0 across the board ) to achieve my 1700 mair request </b>
+                <b>Ex: Here i had to change my turbospeedlimiter (raised to 1.0 across the board ,and raise the other turbospeedtab to new max airmass) to achieve my 1700 mair request </b>
                 </div>
                 <img className="" src={tsl}   style={{maxWidth:'50%',height:'auto'}}alt="Logo" />
                 <img className="" src={arv2}   style={{maxWidth:'50%',height:'auto'}}alt="Logo" />
