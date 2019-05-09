@@ -45,28 +45,28 @@ class getDetailTextForBoost extends Component {
 
             <h4> Tuning your Boost/ Tuning Foreign Turbo Setups  </h4>
             <b><h3>  Preliminaries : </h3></b>
-          <table>
+          <div>
               <li> <b> Choosing Wastegate spring lb  </b> : Choose a spring thats somewhere 1/3- 1/2 of your desired boost level</li>
               <li> <b> too high Wastegate spring lb  </b> : wont allow us to have proper boost regulation</li>
               <li> <b> too low Wastegate spring lb  </b> : wont allow you to hit high enough targets </li>
               <li> understand limiters and how they work together</li>
-              </table>
+              </div>
               
             <b><h3>Step 1 : Finding out when to activate the boost controller</h3> </b>
             <p>The idea here is that we need to activate the boost controller when the turbo isnt yet fully spooled (when the base boost is hit) </p>
             
             <b><p>So now lets disable the boost controller and log some full throttle runs </p></b>
-            <table>
+            <div>
                     <li> <b> turn off boost controller  </b> : boostcal.st_enable = 0 </li>
                     <li> <b> turn off boost adaptation </b> :  boostcal.EnableBoostadap = 0</li>
                     <li> <b> Fill the boostcal.regmap with 0's (0% duty cycle)  </b></li>
                    
-            <p>Once you complete this look for a good third gear pull throughout the rev range in your logs and fill in the following tables </p>
+            <p>Once you complete this look for a good third gear pull throughout the rev range in your logs and fill in the following divs </p>
                     <li> <b> BoostCal.P_LimTab </b> </li>
                     <li> <b> BoostCal.I_LimTab </b> </li>
-                    <p>So once the mair goes higher then the values in these tables then your boost controller will kick in</p>
+                    <p>So once the mair goes higher then the values in these divs then your boost controller will kick in</p>
                     <p>The lower part of the I_limtab is when ilim becomes active , i can raise these so that it only becomes active past 900 mg/c as its not needed to be active before the turbo spools </p>
-            </table>
+            </div>
                     <img className="" src={iplim}   style={{maxWidth:'30%',height:'auto'}}alt="Logo" />
              <b><h3>Step 2  : Setting your boost intervals/tuning the boostcal.regmap</h3> </b>
                     <p>So since we have a higher base boost than before we now have to rescale our boostcal.regmap x-axis parameters</p>
@@ -77,33 +77,33 @@ class getDetailTextForBoost extends Component {
                     <b>Note: Based on your turbo setup you may have more or less flowing capabilities, so determining how high you can go is based on the flow characteristics of your turbo</b>
              <b><h3>Step 3  : Fine tuning the boostcal.regmap</h3> </b>
                     <p><b>So now we have our targets set up we now want to do the following: </b></p>
-             <table>
+             <div>
                     <li> <b> Activiate the boost controller  </b> : boostcal.st_enable = 1 </li>
                     <li> <b> Boostcal.regMap to filled with 0's  </b> </li>
                     <li> <b> Boostcal.Pmap to filled with 0's  </b>  </li>
                     <li> <b> Boostcal.Imap to filled with 0's  </b>  </li>
                     <li> <b> Boostcal.Dmap to filled with 0's  </b>  </li>
-                    </table>
+                    </div>
                     <h5>So now if we look at the Boostcal.regMap your support points should now include the new ones that you entered before</h5>
                     <img className="" src={rmupd}   style={{maxWidth:'30%',height:'auto'}}alt="Logo" />
                     <p> So the idea here is we will start at the first interval and work our way to the maximum interval by adjusting the regmap   </p>
              <center>
               <b><h3>Step 3.1  : Adjusting Airmass limiters(mreq)</h3> </b>
-             <table>
+             <div>
                     <p><b>( Changing mreq ) : So to start off you must change your bstknckcal.maxairmass right most column to request the first interval airmass  </b></p>
                     <li> ex: In my 1300 interval I set the right most column to request 1300 mair between 3000-5800 rpm   </li>
-              </table>
+              </div>
               
              <b><h3>Step 3.2  : Adjusting actual Airmass (mair)</h3> </b>
-             <table>
+             <div>
                     <p><b>(Adjusting mair) : By changing the duty cycle you then change how much air is delivered, so i would change the regmap to in intervals of 5-10% at at a time until I got within 1-3% of my airmass</b></p>
                     <li> ex: In my 1300 interval i set the duty cycle in my regmap to 2% because my base boost was just under that interval   </li>
-            </table>
+            </div>
              <b><h3>Step 3.3 : Log and repeat </h3> </b>
-             <table>
+             <div>
                     <p><b>Now go out for a drive and log information , the idea is to get as close as possible to the targets </b></p>
                     <p><b>Once you dial in on one interval move up to the next one ( repeat 3.1-3) by adjusting , requested airmass, and adjusting the wastegate duty cylce until you complete the set </b></p>
-            </table>
+            </div>
             </center>
              
              <b><h3>Step 4  : Re-Activating the pid controller </h3> </b>

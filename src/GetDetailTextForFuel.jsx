@@ -45,11 +45,15 @@ class GetDetailTextForFuel extends Component {
           <img className="" src={pwm}   style={{maxWidth:'30%',height:'auto'}}alt="Logo" />*/}
           <img className="" src={fuel}   style={{maxWidth:'30%',height:'auto'}}alt="Logo" />
               <b><h3>Preliminaries : </h3></b>
-              <table>
-              <b><h6>Familiar with OPEN BINS ( 46s, 55p etc ) </h6></b>
-              <b><h6>Knowledge of the VE fuel maps </h6></b>
-              <b><h6>Wideband lambda sensor </h6></b>
-              </table>
+              <b>
+              
+              <div>
+              Familiar with OPEN BINS ( 46s, 55p etc ) 
+              , Knowledge of the VE fuel maps 
+              , Wideband lambda sensor 
+              </div>
+             
+              </b>
               <b><h3> Configuring your wideband setup: </h3></b>
               <b><h6>So from the documentation there is an open analog input slot on <b>pin 16</b> on the ecu harness </h6></b>
               <b><h6>This is good because t7 suite has an option to convert the 0-5v range into afr readings which will be used for the AUTOTUNE function later on </h6></b>

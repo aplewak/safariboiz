@@ -8,6 +8,8 @@ import arv from '../src/IMAGES/arv.JPG';
 import tsl from '../src/IMAGES/tsl.JPG';
 import arv2 from '../src/IMAGES/arv2.JPG';
 import tqref from '../src/IMAGES/tqref.JPG';
+import tqref2 from '../src/IMAGES/tqref2.JPG';
+import tqref3 from '../src/IMAGES/tqref3.JPG';
 
 
 class GetDetailTextForLimiters extends Component {
@@ -32,50 +34,68 @@ class GetDetailTextForLimiters extends Component {
           
                 </div>
                
-                  <tr>
+                  
                     <b><h4>Description : </h4></b>
                     
 
                     Various maps that limit your engines perfromance 
                     
-                  </tr>
-               <tr>
+                
+               
                 <h4> Preliminaries : </h4>
-                <table>
-                <p>
+                
+               
                   <li> <b>Petrol torque</b> : (Airmass /3.1) = estimated petrol torque(Nm)</li>
                   <li><b> E85 torque</b> : (Airmass / 2.9) = estimated e85 torque(Nm)</li>
-                  </p>
-                  </table>
-                 </tr>
+                
+                 
+                 
               
                 <h4><b> Common Limiting Maps </b></h4>
                 <center>
-                <table>
+                <div>
                     <center>
-             
-                <h10>
+             <div>
+                <h6 >
                     <p> <b> torqueCal.m_AirTorqueMap</b> : gearbox max torque pmiter, the 350/370 column has to be altered(fooled) to achieve higher tq.</p>
                     <p> <b> torqueCal.M_mangearpm </b> : max allowed torque pmit per gear</p>
                     <p> <b> torqueCal.M_EngMaxTab </b> : max engine output tq </p>
                     <p> <b> bstKnkCal.MaxAirmass</b> : Max requested airmass , most right column is used if no knock is detected</p>
                     <p> <b>Others under the limiters tab in t7 suite</b> </p>
-                    </h10>
-                <h4><b> Keep in mind </b></h4>
-                <h10>
-                  The engine torque map references the air/torq maps. So in the example, where 330 is referenced in the rev range is where the max torque will be requesting the max when modified the air/torq map
+                    </h6>
+                    </div>
+                <h4><b> Keep in mind for adjusting torque limiters </b></h4>
+                <h6><b>
+                <div>
+                <div>
+                  The engine torque limiter maps references the air/torq maps. 
+                <li>
+                  For the example below, Where 330nm is referenced in the rev range in the eng tq limiter is where the max torque will be requested.
+                </li>
+                  <li>
+                  Adjust the air/torque maps accordingly so that your airmass equates to roughly the same nm torque and then check the airmass result viewer to ensure you did everything correct
+                </li>
+                  </div>
+                  </div>
+                    </b>
+                 <div>   
                 <img className="" src={tqref}   style={{maxWidth:'50%',height:'auto'}}alt="Logo" />
-                </h10>
+                </div>
+                 <div>   
+                <img className="" src={tqref2}   style={{maxWidth:'50%',height:'auto'}}alt="Logo" />
+                 </div>   
+                <img className="" src={tqref3}   style={{maxWidth:'50%',height:'auto'}}alt="Logo" />
+                </h6>
                 </center>
               
-                </table>
+                </div>
                 </center>
                 <h4><b> Important  </b></h4>
-                <h7><b>When altering these maps I tend to constantly check my airmass result viewer to make sure there are no limiting factors prior to flashing my ecu</b></h7>
+                <h6><b>When altering these maps I tend to constantly check my airmass result viewer to make sure there are no limiting factors prior to flashing my ecu</b></h6>
                     <p> <b>Actions -> Airmass result viewer</b> </p>
                     <h4><b> Example Situation  </b></h4>
-                <h8>So you changed all your airmass and torque limiters and you go to the airmass result view and see you have a bunch of limiters(different colored tabs on the top column) and the airmass values have not increased</h8>
-                <h8>.This is because the limiters need to be altered in order to achieve your desired output </h8>
+                <h6>So you changed all your airmass and torque limiters and you go to the airmass result view and see you have a bunch of limiters(different colored tabs on the top column) and the airmass values have not increased</h6>
+                <h6>.This is because the limiters need to be altered in order to achieve your desired output </h6>
 
                   </center>
                 <img className="" src={arv}   style={{maxWidth:'50%',height:'auto'}}alt="Logo" />
@@ -85,6 +105,7 @@ class GetDetailTextForLimiters extends Component {
                 <img className="" src={tsl}   style={{maxWidth:'50%',height:'auto'}}alt="Logo" />
                 <img className="" src={arv2}   style={{maxWidth:'50%',height:'auto'}}alt="Logo" />
                     <h4> <b>Lastly if you click the limiter text in the airmass result viewer it will bring up the associated maps</b> </h4>
+                   
 
         </div>
     </Collapse>
