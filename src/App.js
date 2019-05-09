@@ -46,6 +46,7 @@ class App extends Component {
           ,boostTextisOpen: false
           ,fuelTextisOpen: false
           ,miscTextisOpen: false
+          ,scalingTextisOpen: false
           ,headerValue: 'Limiters'
       });
       console.log('click');
@@ -56,6 +57,7 @@ class App extends Component {
           ,limiterTextisOpen: false
           ,fuelTextisOpen: false
           ,miscTextisOpen: false
+          ,scalingTextisOpen: false
           ,headerValue: 'Boost '
       });
       console.log('click');
@@ -66,6 +68,7 @@ class App extends Component {
         ,limiterTextisOpen: false
         ,boostTextisOpen: false
         ,miscTextisOpen: false
+        ,scalingTextisOpen: false
         ,headerValue: 'Fuel'
       });
       console.log('click');
