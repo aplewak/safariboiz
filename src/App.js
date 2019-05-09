@@ -15,7 +15,7 @@ class App extends Component {
       super();
       
       this.state = {
-        headerValue : 'Trionic Tuning Tutorials'
+        headerValue : 'Trionic 7 Tuning Tutorials'
         , limiterTextisOpen : false
         , boostTextisOpen : false
         , fuelTextisOpen : false
