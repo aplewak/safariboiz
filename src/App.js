@@ -145,6 +145,8 @@ class App extends Component {
       </div>
        
          <center><b>APLEWAK@GITHUB.IO/trionictuningtutorials</b></center>
+         <center><b><a Donate to trionictuning  href="https://www.trionictuning.com/forum/app.php/donate">(Donate to Trionic Tuning)</a>
+         </b></center>
       </div>
     );
   }
