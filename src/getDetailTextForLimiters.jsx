@@ -78,6 +78,9 @@ return (
       </div>
     </div>
     </b>
+    </h6>
+    </div>
+    </center>
     <div>
       <img className="" src={tqref}   style={{maxWidth:'50%',height:'auto'}}alt="Logo" />
     </div>
@@ -85,9 +88,6 @@ return (
       <img className="" src={tqref2}   style={{maxWidth:'50%',height:'auto'}}alt="Logo" />
     </div>
     <img className="" src={tqref3}   style={{maxWidth:'50%',height:'auto'}}alt="Logo" />
-    </h6>
-    </div>
-    </center>
     
   </div>
   </center>
