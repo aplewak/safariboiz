@@ -113,7 +113,7 @@ class getDetailTextForBoost extends Component {
              <label style={{backgroundColor:'lightgrey',borderRadius:'5px'}}><b><h3>Step 4  : Re-Activating the pid controller </h3> </b></label>
             
                     <p><b> Now you need to revert the P,D and I maps to the original state and do the following    </b></p>
-                    <p><b> When the pid controller it will influence how much you will undershoot/overshoot  </b></p>
+                    <p><b> When the pid controller is active it will influence how much you will undershoot/overshoot  </b></p>
                     <p><b> Regmap value + pid = target pwm (wastegate duty cycle)  </b></p>
                     <p><b> (mreq - mair achieved )* pconst(pmap xaxis) /100 = duty cycle to subtract from the intervals   </b></p>
                     <li> ex : (1500- 1460 )*50 / 100 = 2 = 2% so i would subtract 2% from my 1500 mair interval   </li>

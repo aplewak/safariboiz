@@ -40,12 +40,18 @@ return (
   <h4> Preliminaries : </h4>
   
   
+  
   <li> <b>Petrol torque</b> : (Airmass /3.1) = estimated petrol torque(Nm)</li>
   <li><b> E85 torque</b> : (Airmass / 2.9) = estimated e85 torque(Nm)</li>
   
   
   
-  
+  <div  style={{display:'responsive',width:'25%'}}>
+  <li> <h4><b> VIN LIMITERS (must read)</b>
+  </h4> For certain vins theres a VIN limiter for th 2.0 and 2.3 engines. Ensure that if you have a 2.3 use a capital <b>G</b> for the 8th character in the vin and <b>K</b> for 2.0 engines. 
+  If you do not you will then be limited to about 290 nm which roughly equates 900 mair </li>
+  <li>example : YS3EH45<b>G</b>763502208 </li>
+  </div>
   <h4><b> Common Limiting Maps </b></h4>
   <center>
   <div>
